@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include interview *.css
+recursive-include interview *.csv
+recursive-include interview *.html
+recursive-include interview *.ico
+recursive-include interview *.js
+recursive-include interview *.json
+recursive-include interview *.md
+recursive-include interview *.png
+recursive-include interview *.py
+recursive-include interview *.svg
+recursive-include interview *.txt
+recursive-exclude interview *.pyc
