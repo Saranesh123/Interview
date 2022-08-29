@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "JI-.#####",
+ "creation": "2022-08-25 09:46:08.909647",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "job_applicant",
+  "applicant_name",
+  "company",
+  "gender",
+  "column_break_5",
+  "status",
+  "position_applied",
+  "designation",
+  "department",
+  "number_of_rounds",
+  "rounds_section",
+  "rounds",
+  "interview_evaluation_round",
+  "job_offer_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "job_applicant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Job Applicant",
+   "options": "Job Applicant",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_applicant.applicant_name",
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Applicant Name",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nNone\nPending\nSelected\nRejected\nWaiting List / Withheld",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "job_applicant.job_title",
+   "fieldname": "position_applied",
+   "fieldtype": "Data",
+   "label": "Position Applied",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "job_applicant.designation",
+   "fieldname": "designation",
+   "fieldtype": "Data",
+   "label": "Designation",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "number_of_rounds",
+   "fieldtype": "Int",
+   "label": "Number of Rounds",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rounds_section",
+   "fieldtype": "Section Break",
+   "label": "Rounds"
+  },
+  {
+   "fieldname": "rounds",
+   "fieldtype": "Table",
+   "label": "Rounds",
+   "options": "Rounds",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Job Interview",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "interview_evaluation_round",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Interview Evaluation Round"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "job_offer_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Job Offer Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-08-26 09:57:03.444082",
+ "modified_by": "Administrator",
+ "module": "Interview",
+ "name": "Job Interview",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
